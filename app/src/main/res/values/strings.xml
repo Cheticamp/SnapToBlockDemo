@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">SnapToBlock Demo</string>
+    <string name="action_settings">Settings</string>
+    <string name="direction_ltr">LTR</string>
+    <string name="direction_rtl">RTL</string>
+    <string name="scroll_axis">Scroll Axis</string>
+    <string name="rows">Rows</string>
+    <string name="max_fling">Max Fling</string>
+    <string name="orientation">Orientation</string>
+    <string name="horizontal">Horizontal</string>
+    <string name="vertical">Vertical</string>
+    <string name="columns">Columns</string>
+    <string name="max_pages_to_fling">Max Pages\nto Fling</string>
+    <string name="margins">Margins</string>
+    <string name="decorations">Decorations</string>
+    <string name="item">Item</string>
+    <string name="start">Start</string>
+    <string name="end">End</string>
+    <string name="on_end_items">Apply to\nEnd Items</string>
+    <string name="settings">Settings</string>
+    <string name="snap_target">%d T</string>
+    <string name="snapped_position">%d S</string>
+    <string name="snap_enabled">Snap enabled?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="scroll_to_left_end">Scroll to left/top start</string>
+    <string name="scroll_to_right_end">Scroll to right/bottom end</string>
+</resources>

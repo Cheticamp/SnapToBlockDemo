@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewParams"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_height="200dp" />
+
+    <TableLayout
+        android:id="@+id/recyclerViewParams"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recyclerView">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:paddingEnd="8dp"
+                android:text="@string/scroll_axis"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:text="@string/rows"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:text="@string/columns"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:text="@string/max_fling"
+                tools:ignore="HardcodedText" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/scrollAxis"
+                android:background="@drawable/border"
+                android:textStyle="bold"
+                tools:text="Horizontal" />
+
+            <TextView
+                android:id="@+id/rows"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:textStyle="bold"
+                tools:text="4" />
+
+            <TextView
+                android:id="@+id/columns"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:textStyle="bold"
+                tools:text="3" />
+
+            <TextView
+                android:id="@+id/maxFlingPages"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:textStyle="bold"
+                tools:text="2" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_height="match_parent"
+                android:background="@drawable/border"
+                android:text="@string/orientation"
+                android:textAppearance="@android:style/TextAppearance.Material.Small"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:background="@drawable/border"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:background="@drawable/border"
+                android:gravity="center" />
+
+            <TextView
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:text="@string/snap_enabled" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+
+            <TextView
+                android:id="@+id/layoutDirection"
+                android:background="@drawable/border"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText"
+                tools:text="@string/direction_ltr" />
+
+            <TextView android:background="@drawable/border" />
+
+            <TextView
+                android:background="@drawable/border"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/isSnapEnabled"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:textStyle="bold" />
+
+        </TableRow>
+    </TableLayout>
+
+
+</android.support.constraint.ConstraintLayout>

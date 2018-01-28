@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:id="@+id/rgScrollingAxis"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/border"
+            android:paddingEnd="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlSymmetry">
+
+            <RadioButton
+                android:id="@+id/rbHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:checked="true"
+                android:text="@string/horizontal"
+                tools:ignore="HardcodedText" />
+
+            <RadioButton
+                android:id="@+id/rbVerticalAxis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vertical"
+                tools:ignore="HardcodedText" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/marginHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/margins"
+            app:layout_constraintBottom_toBottomOf="@+id/doMarginStart"
+            app:layout_constraintEnd_toEndOf="@+id/decorationHeader"
+            app:layout_constraintTop_toTopOf="@+id/doMarginStart" />
+
+        <CheckBox
+            android:id="@+id/doMarginStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layoutDirection="rtl"
+            app:layout_constraintBottom_toTopOf="@+id/doDecorationStart"
+            app:layout_constraintStart_toEndOf="@+id/marginHeader" />
+
+        <CheckBox
+            android:id="@+id/doMarginEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layoutDirection="rtl"
+            app:layout_constraintStart_toEndOf="@+id/doMarginStart"
+            app:layout_constraintTop_toTopOf="@+id/doMarginStart" />
+
+        <TextView
+            android:id="@+id/decorationHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/decorations"
+            app:layout_constraintBottom_toBottomOf="@+id/doDecorationStart"
+            app:layout_constraintStart_toEndOf="@+id/rgScrollingAxis"
+            app:layout_constraintTop_toTopOf="@+id/doDecorationStart" />
+
+        <CheckBox
+            android:id="@+id/doDecorationStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layoutDirection="rtl"
+            app:layout_constraintBottom_toBottomOf="@+id/rgScrollingAxis"
+            app:layout_constraintStart_toEndOf="@+id/decorationHeader" />
+
+        <CheckBox
+            android:id="@+id/doDecorationEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layoutDirection="rtl"
+            app:layout_constraintStart_toEndOf="@+id/doDecorationStart"
+            app:layout_constraintTop_toTopOf="@+id/doDecorationStart" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/item"
+            app:layout_constraintBottom_toTopOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="@+id/textView4"
+            app:layout_constraintStart_toStartOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start"
+            app:layout_constraintBottom_toTopOf="@+id/doMarginStart"
+            app:layout_constraintEnd_toEndOf="@+id/doMarginStart"
+            app:layout_constraintStart_toStartOf="@+id/doMarginStart" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/end"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="@id/doMarginEnd"
+            app:layout_constraintStart_toStartOf="@+id/doMarginEnd" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/on_end_items"
+            app:layout_constraintBottom_toBottomOf="@id/textView4"
+            app:layout_constraintStart_toEndOf="@id/verticalBarrier1" />
+
+        <CheckBox
+            android:id="@+id/doFirstLastMargins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:checked="true"
+            app:layout_constraintEnd_toEndOf="@+id/textView5"
+            app:layout_constraintStart_toStartOf="@id/textView5"
+            app:layout_constraintTop_toTopOf="@id/doMarginEnd" />
+
+        <CheckBox
+            android:id="@+id/doFirstLastDecorations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            app:layout_constraintStart_toStartOf="@id/doFirstLastMargins"
+            app:layout_constraintTop_toTopOf="@+id/doDecorationStart" />
+
+        <android.support.constraint.Barrier
+            android:id="@+id/verticalBarrier1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="doMarginEnd,textView4" />
+
+        <android.support.constraint.Barrier
+            android:id="@+id/verticalBarrier2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="textView5" />
+
+        <TextView
+            android:id="@+id/scrollingAxisHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@color/background_material_light_local"
+            android:text="@string/scroll_axis"
+            app:layout_constraintBottom_toTopOf="@+id/rgScrollingAxis"
+            app:layout_constraintStart_toStartOf="@+id/rgScrollingAxis"
+            app:layout_constraintTop_toTopOf="@+id/rgScrollingAxis"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/rowsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rows"
+            app:layout_constraintBottom_toBottomOf="@+id/colsTextView"
+            app:layout_constraintEnd_toEndOf="@+id/rowsPicker"
+            app:layout_constraintStart_toStartOf="@+id/rowsPicker" />
+
+        <NumberPicker
+            android:id="@+id/rowsPicker"
+            android:layout_width="30dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="16dp"
+            android:descendantFocusability="blocksDescendants"
+            android:focusableInTouchMode="false"
+            android:touchscreenBlocksFocus="true"
+            app:layout_constraintStart_toEndOf="@+id/verticalBarrier2"
+            app:layout_constraintTop_toBottomOf="@+id/rowsTextView" />
+
+        <TextView
+            android:id="@+id/colsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/columns"
+            app:layout_constraintBottom_toBottomOf="@+id/maxPagesTextView"
+            app:layout_constraintEnd_toEndOf="@+id/colsPicker"
+            app:layout_constraintStart_toStartOf="@+id/colsPicker"
+            tools:ignore="HardcodedText" />
+
+        <NumberPicker
+            android:id="@+id/colsPicker"
+            android:layout_width="30dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="32dp"
+            android:descendantFocusability="blocksDescendants"
+            android:focusableInTouchMode="false"
+            android:touchscreenBlocksFocus="true"
+            app:layout_constraintBottom_toBottomOf="@+id/rowsPicker"
+            app:layout_constraintStart_toEndOf="@+id/rowsPicker" />
+
+        <TextView
+            android:id="@+id/maxPagesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/max_pages_to_fling"
+            app:layout_constraintEnd_toEndOf="@+id/maxFlingPagesPicker"
+            app:layout_constraintStart_toStartOf="@+id/maxFlingPagesPicker"
+            app:layout_constraintTop_toTopOf="@+id/textView5"
+            tools:ignore="HardcodedText" />
+
+        <NumberPicker
+            android:id="@+id/maxFlingPagesPicker"
+            android:layout_width="30dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="32dp"
+            android:descendantFocusability="blocksDescendants"
+            android:focusableInTouchMode="false"
+            android:touchscreenBlocksFocus="true"
+            app:layout_constraintBottom_toBottomOf="@+id/colsPicker"
+            app:layout_constraintStart_toEndOf="@+id/colsPicker" />
+
+        <Switch
+            android:id="@+id/layoutDirectionSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:showText="true"
+            android:textOff="@string/direction_ltr"
+            android:textOn="@string/direction_rtl"
+            android:textStyle="bold"
+            android:thumbTint="@android:color/holo_blue_light"
+            app:layout_constraintEnd_toEndOf="@+id/orientationHeader"
+            app:layout_constraintStart_toStartOf="@+id/orientationHeader"
+            app:layout_constraintTop_toBottomOf="@+id/orientationHeader"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/orientationHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/orientation"
+            app:layout_constraintEnd_toEndOf="@+id/rgScrollingAxis"
+            app:layout_constraintStart_toStartOf="@+id/rgScrollingAxis"
+            app:layout_constraintTop_toBottomOf="@+id/rgScrollingAxis"
+            tools:ignore="HardcodedText" />
+
+        <CheckBox
+            android:id="@+id/isSnapEnabled"
+            android:layout_width="wrap_content"
+            android:layout_height="29dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:checked="true"
+            android:layoutDirection="rtl"
+            android:text="@string/snap_enabled"
+            app:layout_constraintBottom_toBottomOf="@+id/layoutDirectionSwitch"
+            app:layout_constraintEnd_toEndOf="@+id/verticalBarrier1"
+            app:layout_constraintStart_toEndOf="@+id/orientationHeader"
+            app:layout_constraintTop_toTopOf="@+id/orientationHeader" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
