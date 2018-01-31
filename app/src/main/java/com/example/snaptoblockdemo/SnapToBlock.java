@@ -154,7 +154,9 @@ public class SnapToBlock extends SnapHelper {
         int snapPos;
 
         if (firstVisiblePos == mPriorFirstPosition) {
-            if (isDirectionToBottom(llm, (mPriorPositionOffset - firstVisibleOffset) < 0)) {
+            if (firstVisibleOffset == mPriorPositionOffset) {
+                snapPos = firstVisiblePos;
+            } else if (isDirectionToBottom(llm, (mPriorPositionOffset - firstVisibleOffset) < 0)) {
                 snapPos = roundUpToBlockSize(firstVisiblePos + 1);
             } else {
                 snapPos = roundDownToBlockSize(firstVisiblePos);
